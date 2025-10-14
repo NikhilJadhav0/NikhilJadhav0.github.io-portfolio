@@ -1,0 +1,69 @@
+# Dependencies
+node_modules/
+.pnpm/
+.yarn/
+.yarn-cache/
+.npm/
+package-lock.json
+yarn.lock
+
+# Production build
+build/
+dist/
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache
+.cache/
+.parcel-cache/
+.next/
+out/
+
+# Storybook
+storybook-static/
+
+# Optional — if you have ML or backend code in same repo
+*.pkl
+*.h5
+*.pt
+*.ckpt
+__pycache__/
+*.pyc
+*.ipynb_checkpoints/
+
+# Misc
+*.bak
+*.old
