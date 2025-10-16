@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../App.css';
+
+import '../styles/components.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

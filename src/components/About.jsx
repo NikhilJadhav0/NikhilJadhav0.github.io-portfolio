@@ -1,6 +1,6 @@
 // src/components/About.jsx
 import React from "react";
-import "../App.css";
+import "../styles/components.css";
 
 const About = () => {
   return (
