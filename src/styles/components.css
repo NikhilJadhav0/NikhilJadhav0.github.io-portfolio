@@ -601,25 +601,20 @@ section:hover {
 }
 
 
+/* ===============================
+   PROJECTS SECTION
+==================================*/
 
-/* ───────────────────────────────
-   PROJECTS
-   ─────────────────────────────── */
-.projects {
+.projects-section {
   padding: 8rem 2rem;
   background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: blur(10px);
-  
-  border: none;
-  margin: 2rem auto;
   color: #f8fafc;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.projects h2 {
+.projects-section h2 {
   font-size: 3rem;
   margin-bottom: 3rem;
   color: #38bdf8;
@@ -628,7 +623,7 @@ section:hover {
   text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
 }
 
-.projects h2::after {
+.projects-section h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -638,26 +633,27 @@ section:hover {
   background: linear-gradient(90deg, transparent 0%, #38bdf8 50%, transparent 100%);
 }
 
-.project-list {
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
+  gap: 2.5rem;
+  max-width: 1100px;
   margin: 0 auto;
+  justify-items: center;
 }
 
+/* PROJECT CARD DESIGN */
 .project-card {
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 24px;
-  box-shadow:
-    0 4px 30px rgba(0, 0, 0, 0.2),
-    0 0 20px rgba(56, 189, 248, 0.1),
-    inset 0 0 20px rgba(56, 189, 248, 0.05);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(56, 189, 248, 0.05);
   border: 2px solid rgba(56, 189, 248, 0.2);
+  border-radius: 20px;
   padding: 2rem;
-  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
@@ -665,135 +661,89 @@ section:hover {
 
 .project-card::before {
   content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.1), transparent 50%);
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(135deg, transparent, rgba(56, 189, 248, 0.3), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow:
-    0 8px 40px rgba(0, 0, 0, 0.3),
-    0 0 30px rgba(56, 189, 248, 0.2);
 }
 
 .project-card:hover::before {
   opacity: 1;
 }
 
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.05) 60%);
-  pointer-events: none;
-}
-
-
-
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
 }
 
-.project-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+.project-title {
+  font-size: 1.5rem;
   color: #38bdf8;
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
 }
 
-.project-card p {
-  margin-bottom: 1.5rem;
+.project-description {
+  font-size: 1rem;
   color: #e2e8f0;
-  line-height: 1.7;
-  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
+.project-tech {
+  font-size: 0.95rem;
+  color: #a5f3fc;
+  margin-bottom: 1.5rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #38bdf8;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.7);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+  .projects-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .projects-section h2 {
+    font-size: 2rem;
+  }
+
   .project-card {
     padding: 1.5rem;
   }
-}
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin: 1.5rem 0;
-  justify-content: center;
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .project-tech {
+    font-size: 0.85rem;
+  }
 }
 
-.tech-stack span {
-  background: rgba(56, 189, 248, 0.1);
-  border-radius: 12px;
-  box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.1),
-    0 0 15px rgba(56, 189, 248, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  padding: 0.5rem 1.2rem;
-  font-size: 0.95rem;
-  color: #38bdf8;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-}
-
-.tech-stack span:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.2),
-    0 0 20px rgba(56, 189, 248, 0.2);
-  background: rgba(56, 189, 248, 0.15);
-}
-
-.tech-stack span::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 60%);
-  pointer-events: none;
-}
-
-.project-links {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.project-links a {
-  background: rgba(255, 255, 255, 0.15);
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.project-links a:hover {
-  background: rgba(56, 189, 248, 0.2);
-  color: #fff;
-  transform: translateY(-2px);
-}
 /* ───────────────────────────────
    CONTACT
    ─────────────────────────────── */
@@ -955,3 +905,8 @@ section:hover {
     gap: 1.2rem;
   }
 }
+/* .project-card,
+.project-link {
+  position: relative;
+  z-index: 10;
+} */
