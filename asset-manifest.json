@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/NikhilJadhav0.github.io-portfolio/static/css/main.8ccacc59.css",
-    "main.js": "/NikhilJadhav0.github.io-portfolio/static/js/main.f3c836ad.js",
+    "main.css": "/NikhilJadhav0.github.io-portfolio/static/css/main.eca50775.css",
+    "main.js": "/NikhilJadhav0.github.io-portfolio/static/js/main.4e72c33e.js",
     "static/js/453.6264690d.chunk.js": "/NikhilJadhav0.github.io-portfolio/static/js/453.6264690d.chunk.js",
     "index.html": "/NikhilJadhav0.github.io-portfolio/index.html",
-    "main.8ccacc59.css.map": "/NikhilJadhav0.github.io-portfolio/static/css/main.8ccacc59.css.map",
-    "main.f3c836ad.js.map": "/NikhilJadhav0.github.io-portfolio/static/js/main.f3c836ad.js.map",
+    "main.eca50775.css.map": "/NikhilJadhav0.github.io-portfolio/static/css/main.eca50775.css.map",
+    "main.4e72c33e.js.map": "/NikhilJadhav0.github.io-portfolio/static/js/main.4e72c33e.js.map",
     "453.6264690d.chunk.js.map": "/NikhilJadhav0.github.io-portfolio/static/js/453.6264690d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ccacc59.css",
-    "static/js/main.f3c836ad.js"
+    "static/css/main.eca50775.css",
+    "static/js/main.4e72c33e.js"
   ]
 }
