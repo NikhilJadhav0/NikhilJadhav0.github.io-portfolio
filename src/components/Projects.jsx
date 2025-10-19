@@ -5,7 +5,7 @@ import '../styles/components.css';
 
 const Projects = () => {
   return (
-    <section className="projects-section">
+    <section id='projects' className="projects-section">
       <h2 className="section-title">Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (

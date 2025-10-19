@@ -235,7 +235,14 @@
   backdrop-filter: blur(8px);
   text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
 }
-
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
 .hero-button:hover {
   background: rgba(56, 189, 248, 0.2);
   background-color: #0ea5e9;

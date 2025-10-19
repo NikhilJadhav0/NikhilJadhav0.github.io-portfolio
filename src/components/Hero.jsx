@@ -26,6 +26,13 @@ const Hero = () => {
           <a href="#contact" className="hero-button secondary">
             💬 Let’s Connect
           </a>
+          <a
+            href={`${process.env.PUBLIC_URL}/assets/Resume/Nikhil_V_Jadhav.pdf`}
+            className="hero-button tertiary"
+            download
+          >
+            📄 Download Resume
+          </a>
         </div>
       </div>
     </section>
